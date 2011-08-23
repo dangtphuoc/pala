@@ -4,7 +4,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 <script type="text/javascript" src="js/jquery-min.js"></script>
+<script type="text/javascript" src="http://vnexpress.net/Service/Forex_Content.js"></script>
 <script type="text/javascript">
+$(function(){
+	var $exchangeRate = $('#exchange_rate');
+	$exchangeRate.val(vCosts[0].replace(".", ""));
+});
 
 function calculateGoldPrice() {
 	var $usdPerOunce = $('#usd_per_ounce');
@@ -23,7 +28,7 @@ function calculateGoldPrice() {
 <body>
 <p align="left"><strong><font size="6">Gold 
 Calculation</font></strong></p>
-<p>Exchange Rate:&nbsp;<input id="exchange_rate">&nbsp;VND</p>
+<p>Exchange Rate:&nbsp;<input id="exchange_rate" style="text-align: right;">&nbsp;VND <label style="font:italic 10px arial; color:#919090;">(Source: <a href="http://www.eximbank.com.vn" target="_blank"><img style="border:0px;vertical-align:middle" src="http://vnexpress.net/Images/logo-EXIM.gif"></a>)</label></p>
 <table style="WIDTH: 654pt; BORDER-COLLAPSE: collapse" border="0" cellspacing="0" 
 cellPadding=0 width=871>
   <colgroup>
