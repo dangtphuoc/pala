@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript" src="js/jquery-min.js"></script>
+<script type="text/javascript">
+
+function calculateGoldPrice() {
+	var $usdPerOunce = $('#usd_per_ounce');
+	var $usdPerLuong = $('#usd_per_luong');
+	var $vndPerOunce = $('#vnd_per_ounce');
+	var $vndPerLuong = $('#vnd_per_luong');
+	var $exchangeRate = $('#exchange_rate');
+	var usdPerLuong = (37.5 * $usdPerOunce.val())/31.1035;
+	$usdPerLuong.html(usdPerLuong);
+	$vndPerOunce.html($usdPerOunce.val() * $exchangeRate.val());
+	$vndPerLuong.html(usdPerLuong * $exchangeRate.val());
+}
+
+</script>
+</head>
+<body>
+<p align="left"><strong><font size="6">Gold 
+Calculation</font></strong></p>
+<p>Exchange Rate:&nbsp;<input id="exchange_rate">&nbsp;VND</p>
+<table style="WIDTH: 654pt; BORDER-COLLAPSE: collapse" border="0" cellspacing="0" 
+cellPadding=0 width=871>
+  <colgroup>
+  <col style="WIDTH: 75pt; mso-width-source: userset; mso-width-alt: 3657" 
+  width=100>
+  <col style="WIDTH: 95pt; mso-width-source: userset; mso-width-alt: 4608" 
+  width=126>
+  <col style="WIDTH: 103pt; mso-width-source: userset; mso-width-alt: 5010" 
+  width=137>
+  <col style="WIDTH: 149pt; mso-width-source: userset; mso-width-alt: 7277" 
+  width=199>
+  <col style="WIDTH: 232pt; mso-width-source: userset; mso-width-alt: 11300" 
+  width=309>
+  
+  <tr style="HEIGHT: 15pt" height="20">
+    <td 
+    style="BORDER-BOTTOM: windowtext 0.5pt solid; BORDER-LEFT: windowtext 0.5pt solid; BACKGROUND-COLOR: #9bbb59; WIDTH: 75pt; HEIGHT: 15pt; BORDER-TOP: windowtext 0.5pt solid; BORDER-RIGHT: windowtext 0.5pt solid" 
+    class=xl64 height=20 width=100><strong><font color="#ffffff" 
+      face=Calibri>Unit</font></strong></td>
+    <td 
+    style="BORDER-BOTTOM: windowtext 0.5pt solid; BORDER-LEFT: windowtext; BACKGROUND-COLOR: #9bbb59; WIDTH: 95pt; BORDER-TOP: windowtext 0.5pt solid; BORDER-RIGHT: windowtext 0.5pt solid" 
+    class=xl64 width=126><strong><font color="#ffffff" 
+      face=Calibri>Grams</font></strong></td>
+    <td 
+    style="BORDER-BOTTOM: windowtext 0.5pt solid; BORDER-LEFT: windowtext; BACKGROUND-COLOR: #9bbb59; WIDTH: 103pt; BORDER-TOP: windowtext 0.5pt solid; BORDER-RIGHT: windowtext 0.5pt solid" 
+    class=xl64 width=137><strong><font color="#ffffff" 
+      face=Calibri>USD</font></strong></td>
+    <td 
+    style="BORDER-BOTTOM: windowtext 0.5pt solid; BORDER-LEFT: windowtext; BACKGROUND-COLOR: #9bbb59; WIDTH: 149pt; BORDER-TOP: windowtext 0.5pt solid; BORDER-RIGHT: windowtext 0.5pt solid" 
+    class=xl64 width=199><strong><font color="#ffffff" 
+      face=Calibri>VND</font></strong></td>
+    <td 
+    style="BORDER-BOTTOM: #f0f0f0; BORDER-LEFT: #f0f0f0; BACKGROUND-COLOR: transparent; WIDTH: 232pt; BORDER-TOP: #f0f0f0; BORDER-RIGHT: #f0f0f0" 
+    width=309><strong><font color="#ffffff" face="Calibri"></font></strong></td></tr>
+  <tr style="HEIGHT: 18.75pt" height="25">
+    <td 
+    style="BORDER-BOTTOM: windowtext 0.5pt solid; BORDER-LEFT: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent; HEIGHT: 18.75pt; BORDER-TOP: windowtext; BORDER-RIGHT: windowtext 0.5pt solid" 
+    class=xl65 height=25><font face="Calibri">1 ounce<span 
+      style="mso-spacerun: yes">&nbsp;</span></font></td>
+    <td 
+    style="BORDER-BOTTOM: windowtext 0.5pt solid; BORDER-LEFT: windowtext; BACKGROUND-COLOR: transparent; BORDER-TOP: windowtext; BORDER-RIGHT: windowtext 0.5pt solid" 
+    class=xl67 align=right><font size="5" face="Calibri">31.1035</font></td>
+    <td 
+    style="BORDER-BOTTOM: windowtext 0.5pt solid; BORDER-LEFT: windowtext; BACKGROUND-COLOR: transparent; BORDER-TOP: windowtext; BORDER-RIGHT: windowtext 0.5pt solid" 
+    class=xl66 align=right><font size="5" face="Calibri"><input id="usd_per_ounce"></font></td>
+    <td 
+    style="BORDER-BOTTOM: windowtext 0.5pt solid; BORDER-LEFT: windowtext; BACKGROUND-COLOR: transparent; BORDER-TOP: windowtext; BORDER-RIGHT: windowtext 0.5pt solid" 
+    class=xl66 align=right><font size="5" face="Calibri"><div id="vnd_per_ounce">38,716,200</div></font></td>
+    <td 
+    style="BORDER-BOTTOM: #f0f0f0; BORDER-LEFT: #f0f0f0; BACKGROUND-COLOR: transparent; BORDER-TOP: #f0f0f0; BORDER-RIGHT: #f0f0f0"><font 
+      face=Calibri>Giá vàng theo Ounce</font></td></tr>
+  <tr style="HEIGHT: 18.75pt" height="25">
+    <td 
+    style="BORDER-BOTTOM: windowtext 0.5pt solid; BORDER-LEFT: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent; HEIGHT: 18.75pt; BORDER-TOP: windowtext; BORDER-RIGHT: windowtext 0.5pt solid" 
+    class=xl69 height=25><strong><font face="Calibri"><font class="font5">1 
+      </font><font class="font8" color="#ff0000">Luong</font></font></strong></td>
+    <td 
+    style="BORDER-BOTTOM: windowtext 0.5pt solid; BORDER-LEFT: windowtext; BACKGROUND-COLOR: transparent; BORDER-TOP: windowtext; BORDER-RIGHT: windowtext 0.5pt solid" 
+    class=xl67 align=right><font size="5" face="Calibri">37.5</font></td>
+    <td 
+    style="BORDER-BOTTOM: windowtext 0.5pt solid; BORDER-LEFT: windowtext; BACKGROUND-COLOR: transparent; BORDER-TOP: windowtext; BORDER-RIGHT: windowtext 0.5pt solid" 
+    class=xl66 align=right><font size="5" face="Calibri"><div id="usd_per_luong">2,271</div></font></td>
+    <td 
+    style="BORDER-BOTTOM: windowtext 0.5pt solid; BORDER-LEFT: windowtext; BACKGROUND-COLOR: transparent; BORDER-TOP: windowtext; BORDER-RIGHT: windowtext 0.5pt solid" 
+    class=xl68 align=right><font color="#ff0000" size="5" 
+      face=Calibri><div id="vnd_per_luong">46,678,268</div></font></td>
+    <td 
+    style="BORDER-BOTTOM: #f0f0f0; BORDER-LEFT: #f0f0f0; BACKGROUND-COLOR: transparent; BORDER-TOP: #f0f0f0; BORDER-RIGHT: #f0f0f0"><font 
+      face=Calibri>Giá vàng tính theo Lu?ng</font></td></tr></table>
+<p><input value="Calculate" type="button" name="calculate" onclick="calculateGoldPrice()"></p>
+</body>
+</html>
