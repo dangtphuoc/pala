@@ -3,8 +3,23 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
+<script type="text/javascript" src="js/jwplayer/jwplayer.js"></script>
 </head>
 <body>
-<object width="300" height="400">  <param name="movie" value="http://www.nhaccuatui.com/l/Q4GdX_ZXA4gM" />  <param name="quality" value="high" />  <param name="wmode" value="transparent" />  <embed src="http://www.nhaccuatui.com/l/Q4GdX_ZXA4gM" quality="high" wmode="transparent" type="application/x-shockwave-flash" width="300" height="400"></embed></object>
+	<div id="container">Loading the player ...</div>
+	<script type="text/javascript">
+		jwplayer("container").setup({
+			flashplayer : "js/jwplayer/player.swf",
+			playlist : [ {
+				file : "music/Akira Phan/Giac mo gian don.mp3",
+				image: "http://images.dailyinfo.vn/image/20100314/VanHoa/DienAnhTruyenHinh/nld_060052_816802202_0.jpg"
+			}, {
+				file : "music/Akira Phan/Mua Gio Ret.mp3",
+				image: "http://images.dailyinfo.vn/image/20100314/VanHoa/DienAnhTruyenHinh/nld_060052_816802202_0.jpg"
+			} ],
+			height : 270,
+			width : 480
+		});
+	</script>
 </body>
 </html>
